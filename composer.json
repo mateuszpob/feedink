@@ -1,0 +1,17 @@
+{
+    "name": "mp/feedink",
+    "require-dev": {
+        "phpunit/phpunit": "^10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mp\\Feedink\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mateuszpob",
+            "email": "mateuszpob@gmail.com"
+        }
+    ]
+}

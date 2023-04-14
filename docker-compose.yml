@@ -1,0 +1,23 @@
+version: "3.4"
+
+services:
+  php:
+    container_name: feedink
+    build:
+      context: .
+    command: >
+      sh -c "composer install; ./vendor/bin/phpunit tests; php ./src/run.php"
+    ports:
+      - 80:80
+    volumes:
+      - ./:/usr/src/feedinkapp
+    networks:
+      - feedink-network
+
+
+volumes:
+  crm-volume:
+
+networks:
+  feedink-network:
+    driver: bridge
